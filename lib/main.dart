@@ -16,7 +16,11 @@ void main() {
             ),
           ),
           child: const Center(
-            child: Text('Hello World!'),
+            child: Text('Daily Sprint', style: TextStyle(
+              color: Colors.white,
+              fontSize: 28,
+              fontStyle: FontStyle.italic
+            ),),
           ),
         ),
       ),
