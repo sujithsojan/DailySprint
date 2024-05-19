@@ -3,23 +3,23 @@ import 'package:flutter/material.dart';
 
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(this.color1,this.color2, {super.key});
+
+final Color color1;
+final Color color2;
 
   @override
   Widget build(context) {
 return Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                Color.fromRGBO(156, 39, 176, 1),
-                Color.fromRGBO(3, 169, 244, 1)
-              ],
+              colors: [color1,color2],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight
             ),
           ),
           child: const Center(
-            child: TextWidget()
+            child: TextWidget('Daily scrum'),
           ),
         );
   }
